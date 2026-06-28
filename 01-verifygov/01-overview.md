@@ -100,7 +100,19 @@ The workflow would be as follows:
     - The citizen's details (to ensure the notice was sent to the correct recipient).
 4. Verification: During the actual communication, the officer can state the details of the session, where the citizen can then cross-reference these verbal claims against the record app. If the details do not match, the citizen can immediately identify the call as fraudulent or erroneous.
 
+## 4. Edge Cases & Limitations
 
+### 4.1 No internet connectivity
+
+To handle the event where there is a loss of internet connectivity on either the citizen's device or the backend service and the verification attempt is unable proceed normally, there can also be a signed digital certificate on the officer's device which can be scanned to show the officer's details as of the latest time it was updated.
+
+However, as there is always the possibility of reverse engineering and spoofing, this record of "offline verification" should be stored locally on the citizen's device, and upon resumption of connectivity, a verification attempt should be made to the backend service to confirm that the officer was indeed legitimate.
+
+In the event that they were a scammer, the citizen is at the very least notified and aware that they were tricked, and can proceed with reporting this to the authorities.
+
+### 4.2 Theft of officer's device
+
+In the situation, the officer will need to inform their superiors and in turn the VerifyGov staff that their device has been stolen, and the officer's record in the database can be updated to revoke their authorization.
 
 # Conclusion
 
