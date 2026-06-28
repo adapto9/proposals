@@ -1,2 +1,2 @@
 # proposals
-Hopefully good ideas
+Hopefully good ideas.
